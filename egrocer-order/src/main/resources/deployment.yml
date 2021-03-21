@@ -5,14 +5,14 @@ metadata:
   labels:
     name: egrocer-order
 spec:
+  type: LoadBalancer
   ports:
-    - nodePort: 30166 
-      port: 8083      
-      targetPort: 8083  
+    - nodePort: 30166
+      port: 8083
+      targetPort: 8083
       protocol: TCP
   selector:           
-    app: egrocer-order
-  type: NodePort       
+    app: egrocer-order      
 
 ---
 apiVersion: apps/v1 
